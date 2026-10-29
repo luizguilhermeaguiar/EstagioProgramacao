@@ -1,5 +1,4 @@
 nomeproduto = input("Nome do produto: ")
-if nomeproduto == null
 Preco = float(input("Preço unitário: "))
 quantidade = int(input("Quantidade vendida: "))
 total = Preco * quantidade
