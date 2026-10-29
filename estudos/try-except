@@ -1,0 +1,8 @@
+try:
+    preco = float(input("Digite o preço: "))
+    print("Preço informado:", preco)
+
+except ValueError:
+    print("Erro: você precisa digitar um número válido.")
+
+teste=input("Programa continua executando!")
