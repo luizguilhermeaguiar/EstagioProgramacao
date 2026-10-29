@@ -7,8 +7,8 @@ while True: # usando o while True para a verificar se o nome do produto é uma e
 while True: # inicia o loop de teste do preço do produto, caso o usuário digite um valor inválido, o loop se repete até que seja digitado um valor válido
     try: #try e except são usados para tratar erros, nesse caso, caso o usuário digite um valor inválido, o programa não quebra e sim exibe uma mensagem de erro
         preco = float(input("Preço unitário: "))
-        if preco < 0:
-            print("Erro: o preço não pode ser negativo.")
+        if preco <= 0:
+            print("Erro: o preço deve ser maior que zero.")
 
         else:
             break
@@ -19,8 +19,8 @@ while True: # inicia o loop de teste do preço do produto, caso o usuário digit
 while True: # inicia o loop de teste da quantidade do produto, caso o usuário digite um valor inválido, o loop se repete até que seja digitado um valor válido
     try:
         quantidade = int(input("Quantidade: "))
-        if quantidade < 0:
-            print("Erro: a quantidade não pode ser negativa.")
+        if quantidade <= 0:
+            print("Erro: a quantidade deve ser maior que zero.")
         else:
             break
     except ValueError:
