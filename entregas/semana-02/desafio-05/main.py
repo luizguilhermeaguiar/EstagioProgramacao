@@ -6,6 +6,8 @@ qtdadevendas = 0
 mtotal = 0
 movimento = " "
 
+#testando o git pelo codespace
+
 while True:    
     while True: # usando o while True para a verificar se o nome do produto é uma entrada valida 
         nome = input("Nome do produto: ")
