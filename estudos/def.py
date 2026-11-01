@@ -1,6 +1,6 @@
-mensagem = "OOOOOO"
+def minha_funcao(nome): # nome é um parametro 
+    mensagem = f"Olá, {nome}" 
+    return mensagem
 
-def minha_funcao():
-    print(f'se eu quiser mostrar uma mensagem ela aparece assim: {mensagem}')
-
-minha_funcao()
+resultado = minha_funcao("luiz") #aqui eu indico que nome vai ser Luiz, 
+print(resultado)
