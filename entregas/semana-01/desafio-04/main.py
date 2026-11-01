@@ -4,6 +4,17 @@ descontogeral = 0
 totalgeral = 0
 qtdadevendas = 0
 
+def exibir_resumo_venda():
+    print(" ")
+    print("--- RESUMO DA VENDA ---")
+    print(f"Produto: {nome}")
+    print(f"Preço unitário: R$ {preco:.2f}")
+    print(f"Quantidade vendida: {quantidade}")
+    print(f"Subtotal da venda: R$ {subtotal:.2f}")
+    print(f"Percentual de desconto aplicado: {porcentagem*100:.0f}%")
+    print(f"Desconto aplicado: R$ {desconto:.2f}")
+    print(f"Total da venda com desconto: R$ {total:.2f}")
+
 while True:    
     while True: # usando o while True para a verificar se o nome do produto é uma entrada valida 
         nome = input("Nome do produto: ")
@@ -41,8 +52,11 @@ while True:
     subtotal = preco * quantidade
 
     if subtotal < 100:
-        desconto = subtotal * 0.00
+        porcentagem = 0
+        desconto = subtotal * porcentagem
         total = subtotal - desconto
+        exibir_resumo_venda()
+        """
         print(" ")
         print("--- RESUMO DA VENDA ---")
         print(f"Produto: {nome}")
@@ -52,10 +66,14 @@ while True:
         print(f"Percentual de desconto aplicado: 0%")
         print(f"Desconto aplicado: R$ {desconto:.2f}")
         print(f"Total da venda com desconto: R$ {total:.2f}")
+        """
 
     elif subtotal < 500:
-        desconto = subtotal * 0.05
+        porcentagem = 0.05
+        desconto = subtotal * porcentagem
         total = subtotal - desconto
+        exibir_resumo_venda()
+        '''
         print(" ")
         print("--- RESUMO DA VENDA ---")
         print(f"Produto: {nome}")
@@ -65,9 +83,13 @@ while True:
         print(f"Percentual de desconto aplicado: 5%")
         print(f"Desconto aplicado: R$ {desconto:.2f}")
         print(f"Total da venda com desconto: R$ {total:.2f}")
+        '''
     else:
-        desconto = subtotal * 0.10
+        porcentagem = 0.10
+        desconto = subtotal * porcentagem
         total = subtotal - desconto
+        exibir_resumo_venda()
+        '''
         print(" ")
         print("--- RESUMO DA VENDA ---")
         print(f"Produto: {nome}")
@@ -77,6 +99,7 @@ while True:
         print(f"Percentual de desconto aplicado: 10%")
         print(f"Desconto aplicado: R$ {desconto:.2f}")
         print(f"Total da venda com desconto: R$ {total:.2f}")
+        '''
 
     qtdatotal = qtdatotal + quantidade
     subtotalgeral = subtotalgeral + subtotal
