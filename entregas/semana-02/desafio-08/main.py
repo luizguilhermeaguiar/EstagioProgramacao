@@ -40,16 +40,13 @@ def calcular_desconto(p_subtotal):
 
 def solicitar_nome():
     while True: # usando o while True para a verificar se o nome do produto é uma entrada valida 
-        nome = input("Nome do produto: ")
+        nome = input("Nome do produto: ")#Variavel local da função 
         if nome.strip(): #função nativa do python que remove espações em brancos, então o teste funciona mesmo que o usuário digite apenas espaços em branco
             return nome
         print("Erro: o nome do produto não pode estar vazio.")
         print(" ")
 
-while True:    
-    #Chamar função para validação do nome
-    nome = solicitar_nome()
-
+def solicitar_preco():
     while True: # inicia o loop de teste do preço do produto, caso o usuário digite um valor inválido, o loop se repete até que seja digitado um valor válido
         try: #try e except são usados para tratar erros, nesse caso, caso o usuário digite um valor inválido, o programa não quebra e sim exibe uma mensagem de erro
             preco = float(input("Preço unitário: "))
@@ -58,12 +55,13 @@ while True:
                 print(" ")
 
             else:
-                break
+                return preco
 
         except ValueError:
             print("Erro: você precisa digitar um número válido.")
             print(" ") 
 
+def solicitar_quantidade():
     while True: # inicia o loop de teste da quantidade do produto, caso o usuário digite um valor inválido, o loop se repete até que seja digitado um valor válido
         try:
             quantidade = int(input("Quantidade: "))
@@ -71,10 +69,18 @@ while True:
                 print("Erro: a quantidade deve ser maior que zero.")
                 print(" ")
             else:
-                break
+                return quantidade
         except ValueError:
             print("Erro: você precisa digitar um número inteiro válido.")
             print(" ")
+
+while True:    
+    #Chamar função para validação do nome
+    nome = solicitar_nome() #Cria uma variavel global para receber o retorno da função, ou seja, o nome válido
+
+    preco = solicitar_preco() #Mesma lógica do nome, a variavel local retorna o valor para a variavel global
+
+    quantidade = solicitar_quantidade() #Mesma lógica de antes
 
     subtotal = preco * quantidade
 
