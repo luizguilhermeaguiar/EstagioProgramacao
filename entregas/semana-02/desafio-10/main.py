@@ -96,6 +96,7 @@ def realizar_venda():
 
     return quantidade, subtotal, desconto, total
 
+#Responsavel pela classificação do movimento da loja
 def classificar_movimento(p_totalgeral):
     if p_totalgeral < 500:
         return "Movimento baixo"
@@ -103,6 +104,13 @@ def classificar_movimento(p_totalgeral):
         return "Movimento moderado"
     else:
         return "Movimento alto"
+
+#Calculo do ticket médio
+def calcular_ticket_medio(p_totalgeral, p_qtdadevendas):
+    if p_qtdadevendas <= 0: 
+        return 0
+    else:
+        return p_totalgeral / p_qtdadevendas
 
 while True:    
     quantidade, subtotal, desconto, total = realizar_venda() 
@@ -121,6 +129,6 @@ while True:
     print(" ")
     continuar = input("Deseja realizar outra venda? (s/n): ")
     if continuar.lower() != 's':
-        ticketmedio = totalgeral / qtdadevendas
+        ticketmedio = calcular_ticket_medio(totalgeral, qtdadevendas)
         exibir_fechamento(qtdadevendas, qtdatotal, subtotalgeral, descontogeral, totalgeral, movimento, maiortotal, ticketmedio)
         break
