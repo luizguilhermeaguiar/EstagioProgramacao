@@ -18,7 +18,7 @@ def calcular_operacao(a, b):
 resultado_soma, resultado_mult = calcular_operacao(5, 3)
 print(resultado_soma, resultado_mult)'''
 
-def realizar_venda():
+'''def realizar_venda():
     nome = solicitar_nome()
     preco = solicitar_preco()
     quantidade = solicitar_quantidade()
@@ -31,4 +31,4 @@ def realizar_venda():
 
     exibir_resumo_venda(nome, preco, quantidade, subtotal, porcentagem, desconto, total)
 
-    return quantidade, subtotal, desconto, total
+    return quantidade, subtotal, desconto, total'''
