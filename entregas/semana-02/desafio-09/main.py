@@ -80,6 +80,7 @@ def solicitar_quantidade():
             print("Erro: você precisa digitar um número inteiro válido.")
             print(" ")
 
+#Todo o calculo da venda esta nessa função, de uma unica venda, para mais de uma venda ainda é no while principal
 def realizar_venda():
     nome = solicitar_nome() #Chama a função de validação do nome 
     preco = solicitar_preco()#Chama a função de validação do preço
