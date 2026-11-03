@@ -94,7 +94,18 @@ def realizar_venda():
 
     exibir_resumo_venda(nome, preco, quantidade, subtotal, porcentagem, desconto, total)
 
-    return quantidade, subtotal, desconto, total
+    #Dicionário com todas as informações da venda
+    venda = {
+        "nome": nome,
+        "preco": preco,
+        "quantidade": quantidade,
+        "subtotal": subtotal,
+        "porcentagem": porcentagem,
+        "desconto": desconto,
+        "total": total
+    }
+
+    return venda
 
 #Responsavel pela classificação do movimento da loja
 def classificar_movimento(p_totalgeral):
@@ -113,15 +124,15 @@ def calcular_ticket_medio(p_totalgeral, p_qtdadevendas):
         return p_totalgeral / p_qtdadevendas
 
 while True:    
-    quantidade, subtotal, desconto, total = realizar_venda() 
+    venda = realizar_venda() 
 
-    if maiortotal < total:
-        maiortotal = total
+    if maiortotal < venda["total"]:
+        maiortotal = venda["total"]
 
-    qtdatotal = qtdatotal + quantidade
-    subtotalgeral = subtotalgeral + subtotal
-    descontogeral = descontogeral + desconto
-    totalgeral = totalgeral + total
+    qtdatotal = qtdatotal + venda["quantidade"]
+    subtotalgeral = subtotalgeral + venda["subtotal"]
+    descontogeral = descontogeral + venda["desconto"]
+    totalgeral = totalgeral + venda["total"]
     qtdadevendas = qtdadevendas + 1
 
     movimento = classificar_movimento(totalgeral)
