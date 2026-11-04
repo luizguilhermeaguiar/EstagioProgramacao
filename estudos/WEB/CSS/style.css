@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: antiquewhite;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+    padding: 20px;
+    background-color: #1E1E1E;
+}
+
+section{
+    background-color: #252525;
+    margin: 20px;
+    padding: 20px;
+}
