@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Vendas</title>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Vendas</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Nova Venda</h2>
+            <form action="">
+                <label for="nome">Nome do produto:</label>
+                <input type="text" name="nome" id="nome" placeholder="Informe o nome do produto" required>
+                <label for="preco">Preço unitário:</label>
+                <input type="number" name="preco" id="preco" placeholder="Informe o preço unitário" required min="0.01" step="0.01">
+                <label for="quantidade">Quantidade vendida:</label>
+                <input type="number" name="quantidade" id="quantidade" placeholder="Informe a quantidade vendida" required min="1">
+                <button type="submit">Registrar Venda</button>
+            </form>
+        </section>
+        <section>
+            <h2>Histórico de Vendas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Preço unitário</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mouse</td>
+                        <td>R$ 50,00</td>
+                        <td>2</td>
+                        <td>R$ 95,00</td>
+                    </tr>
+                    <tr>
+                        <td>Teclado</td>
+                        <td>R$ 100,00</td>
+                        <td>1</td>
+                        <td>R$ 95,00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+</body>
+</html>
