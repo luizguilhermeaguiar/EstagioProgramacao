@@ -18,5 +18,10 @@ header{
 section{
     background-color: #252525;
     margin: 20px;
-    padding: 20px;
+}
+
+.card{
+    border-radius: 10px;
+    border: 1px solid #383838;
+    padding: 24px;
 }
