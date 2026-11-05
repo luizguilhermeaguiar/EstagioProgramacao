@@ -33,6 +33,10 @@ section {
     min-width: 0;
 }
 
+.card h2 {
+    margin-bottom: 16px;
+}
+
 form {
     display: flex;
     flex-direction: column;
