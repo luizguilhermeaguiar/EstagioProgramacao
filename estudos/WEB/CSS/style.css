@@ -10,18 +10,97 @@ body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-header{
+header {
     padding: 20px;
     background-color: #1E1E1E;
 }
 
-section{
-    background-color: #252525;
-    margin: 20px;
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
 }
 
-.card{
+section {
+    background-color: #252525;
+}
+
+.card { 
     border-radius: 10px;
     border: 1px solid #383838;
     padding: 24px;
+    flex: 1;
+    min-width: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+input {
+    padding: 10px;
+    background-color: #303030;
+    color: antiquewhite;
+    border: 1px solid #555555;
+    border-radius: 6px;
+}
+
+input:focus {
+    border-color: #2563EB;
+    outline: 2px solid #2563EB;
+
+}
+
+button {
+    padding: 12px;
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1D4ED8;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #383838;
+}
+
+th {
+    background-color: #303030;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+tbody tr:hover {
+    background-color: #333333;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
 }
