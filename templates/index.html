@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Vendas</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 <body>
     <header>
@@ -13,10 +13,13 @@
     <main>
         <section class="card">
             <h2>Nova Venda</h2>
-            <form action="">
+            {% if erro %}
+                <p class="mensagem-erro">{{ erro }}</p>
+            {% endif %}
+            <form action="/registrar-venda" method="post">
                 <div class="form-group">
                     <label for="nome">Nome do produto:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Informe o nome do produto" required>
+                    <input type="text" name="produto" id="nome" placeholder="Informe o nome do produto" required>
                 </div>
                 <div class="form-group">
                     <label for="preco">Preço unitário:</label>

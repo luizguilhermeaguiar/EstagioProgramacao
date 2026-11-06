@@ -103,6 +103,14 @@ tbody tr:hover {
     overflow-x: auto;
 }
 
+.mensagem-erro {
+    color: #FF8088;
+    background-color: #2D171B;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #B94A55;
+}
+
 @media (max-width: 768px) {
     main {
         flex-direction: column;
